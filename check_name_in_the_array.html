@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function check_fruits (form) {
+    var fruit = form.fruit.value; // getting user data from the form 
+    var fruit_name = fruit.toLowerCase() // converting user data to lowercase
+    // Array contain all fruits
+    var array_fruits = [ "cherry", "apple","Apricots","avocado","banana","blackberries","blackcurrant","blueberries","breadfruit","cantaloupe","carambola","cherimoya","cherries","clementine","coconut meat","cranberries","custard apple","date fruit","durian","gooseberries","grapefruit","grapes","java plum","jujube fruit","kiwifruit","kumquat","lemon","longan","loquat","lychee","mandarin","mango","mangosteen","mulberries","nectarine","olives","orange","papaya","passion fruit","peaches","pear","persimmon","dragonfruit","pineapple","pitanga","plantain","plums","pomegranate","prickly pear","prunes","pummelo","quince","raspberries","rhubarb","rose apple","sapodilla","sapote mamey","soursop","strawberries","sugar apple","tamarind","tangerine","watermelon"];
+    
+    if(array_fruits.indexOf(fruit_name) !== -1 ) // checking if entered fruit name exist in the Array
+	{
+		alert(fruit_name+' exist in the Array'); //displaying this message if fruit exist in the the Array
+	}
+
+	else
+	{
+		alert(fruit_name+' does not exist in the Array'); //displaying this message if fruit does not exist in the the Array
+	}
+
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<!--HTML Form -->
+<FORM NAME="myform" ACTION="" METHOD="GET">Enter Fruit name in the box: <BR>
+<INPUT TYPE="text" NAME="fruit" VALUE=""><P>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="check_fruits(this.form)">
+</FORM>
+</BODY>
+</HTML>
+
